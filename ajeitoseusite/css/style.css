@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --color-primary: #05dd5d;
+    --color-secondary: #25262a;
+    --color-tertiary: #2d2e32;
+    --height-nav: 50px;
+}
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #eaeaea;
+    border-radius: 20px;
+    border: 5px solid #fff;
+}
+body,html{
+    overflow-x: hidden;
+    font-family: poppins;
+    background: var(--color-secondary);
+    color: #fff;
+}
+img{
+    height: auto;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+p{
+    line-height: 22px;
+    font-size: 15px;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+button,
+a.button{
+    display: inline-block;
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 50px;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 15px;
+    border-radius: 50%;
+}
+#btn-whatsapp{
+    display: flex;
+    background: #1ad03f;
+    color: #fff;
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    background: var(--color-secondary);
+    height: var(--height-nav);
+}
+header.bg{
+    transition: .3s;
+    height: var(--height-nav);
+}
+header nav,
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav svg{
+    display: none;
+}
+header nav{
+    height: 100%;
+}
+header nav .logo img{
+    width: 200px;
+}
+header nav ul li a{
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    transition: .3s;
+    border-bottom: 2px solid transparent;
+}
+header nav ul li a:hover,
+header nav ul li a.selected{
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+#inicio{
+    padding: var(--height-nav) 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+#inicio h1{
+    font-weight: 700;
+}
+#inicio h1 b{
+    color: var(--color-primary)
+}
+#inicio .col-md-6{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#passos{
+    padding: var(--height-nav) 0;
+    text-align: center;
+    background: var(--color-tertiary);
+}
+#passos h2{
+    font-weight: 600;
+}
+#passos p{
+    opacity: .8;
+    margin-bottom: 40px;
+}
+#passos .passos{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+#passos .passos:before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    width: 80%;
+    border-top: 1px dashed var(--color-primary);
+}
+#passos .passos .passo > div{
+    background: var(--color-primary);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+#passos .passos .passo:hover{
+    cursor: pointer;
+}
+#passos .passos .passo > div svg{
+    color: #fff;
+}
+
+#vantagens{
+    padding: var(--height-nav) 0;
+    background: var(--color-tertiary);
+}
+#vantagens img{
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+#vantagens h2{
+    color: var(--color-primary);
+}
+#vantagens .col-md-6:first-child svg{
+    width: 100%;
+}
+#vantagens .vantagem{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+#vantagens .vantagem svg{
+    color: var(--color-primary);
+    min-width: 35px;
+    margin-right: 15px;
+}
+#vantagens .vantagem h5{
+    margin-bottom: 5px;
+}
+#vantagens .vantagem p{
+    margin: 0;
+}
+
+#pacotes{
+    padding: var(--height-nav) 0;
+    text-align: center;
+}
+#pacotes p{
+    opacity: .8;
+    margin-bottom: 40px;
+}
+#pacotes .pacotes{
+    display: flex;
+    justify-content: space-around;
+}
+#pacotes .pacotes .pacote{
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+}
+#pacotes .pacotes .pacote:nth-child(2){
+    margin: 0 40px;
+}
+#pacotes .pacotes .pacote h4{
+    font-size: 16px;
+}
+#pacotes .pacotes .pacote h3{
+    color: var(--color-primary);
+    font-size: 20px;
+}
+#pacotes .pacotes .pacote h3 b{
+    font-size: 25px;
+}
+#pacotes .pacotes .pacote .vantagens{
+    text-align: left;
+    margin: 20px 0;
+}
+#pacotes .pacotes .pacote .vantagens svg{
+    color: var(--color-primary);
+}
+
+#institucional{
+    padding: var(--height-nav) 0;
+    background: var(--color-tertiary);
+}
+#institucional .container > div{
+    display: flex;
+}
+#institucional .container > div > div{
+    padding: 0 20px;
+}
+#institucional .container > div > div:first-child{
+    max-width: 33%;
+}
+#institucional .button{
+    color: #fff;
+    border: 1px solid var(--color-primary);
+    transition: .3s;
+}
+#institucional a.button:hover{
+    background: transparent;
+    color: var(--color-primary);
+}
+#institucional .container > div > div:first-child img{
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+#institucional h4{
+    font-weight: 700;
+    font-size: 17px;
+}
+#institucional a{
+    transition: .3s;
+}
+#institucional a:hover{
+    color: var(--color-primary);
+}
+#institucional p,
+#institucional a,
+#institucional li{
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 300;
+}
+#institucional .siga-nos ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+#institucional .siga-nos ul li{
+    padding: 5px;
+}
+#institucional .siga-nos ul li:first-child{
+    padding: 5px 0;
+}
+#institucional .siga-nos .button{
+    padding: 15px;
+    display: inline-flex;
+}
+#institucional .siga-nos .button svg{
+    width: 20px;
+    height: 20px;
+}
+
+@media(max-width: 1200px){
+    #institucional .siga-nos ul li:first-child{
+        padding: 5px;
+    }
+}
+
+@media(max-width: 767px){
+    header nav ul{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        padding: 20px;
+        max-height: calc(100vh - var(--height-nav));
+        overflow: auto;
+        background: #fff;
+        border-top: 1px solid var(--color-secondary);
+        transition: .3s;
+    }
+    header nav ul.active{
+        display: flex;
+        box-shadow: 0 8px 15px 0px rgba(0,0,0,.1);
+    }
+    header nav svg{
+        display: inline-block;
+    }
+
+    #institucional .container > div{
+        flex-wrap: wrap;
+    }
+    #institucional .container > div > div{
+        padding: 20px;
+    }
+    #institucional .container > div > div:first-child{
+        padding-bottom: 0;
+        max-width: 100%;
+    }
+}
